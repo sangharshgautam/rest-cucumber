@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/order"
+           xmlns:order="http://example.com/order"
+           elementFormDefault="qualified">
+
+    <xs:element name="orderResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="orderId" type="xs:string"/>
+                <xs:element name="status" type="order:orderStatus"/>
+                <xs:element name="transactionId" type="xs:string"/>
+                <xs:element name="processedAt" type="xs:dateTime" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="orderStatus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="COMPLETED"/>
+            <xs:enumeration value="PENDING"/>
+            <xs:enumeration value="FAILED"/>
+            <xs:enumeration value="REJECTED"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

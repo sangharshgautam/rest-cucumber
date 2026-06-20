@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProcessRequest",
+  "type": "object",
+  "required": ["name", "email"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Full name of the requester"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email address of the requester"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^\\+?[0-9\\-\\s]+$",
+      "description": "Optional phone number"
+    }
+  },
+  "additionalProperties": false
+}

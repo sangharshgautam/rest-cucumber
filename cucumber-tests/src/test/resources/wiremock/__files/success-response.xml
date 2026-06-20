@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orderResponse xmlns="http://example.com/order">
+    <orderId>ORD-001</orderId>
+    <status>COMPLETED</status>
+    <transactionId>txn-987654321</transactionId>
+    <processedAt>2026-06-20T10:30:00Z</processedAt>
+</orderResponse>
